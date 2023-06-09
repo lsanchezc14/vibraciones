@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.MVVM.Views.Dashboard"
+             Title="Dashboard">
+    <Grid RowDefinitions="0.15*, 0.15, 0.15*, 0.55*">
+        <RoundRectangle Grid.RowSpan="2" StyleClass="TopRectangle"/>
+        <VerticalStackLayout StyleClass="Header">
+            <Label StyleClass="HeaderTitle" Text="Prueba de conexión"/>
+            <Label StyleClass="HeaderSubTitle" Text="Elaborado por Luis"/>
+        </VerticalStackLayout>
+
+        <Grid Grid.Row="1"
+          Grid.RowSpan="2"
+          StyleClass="BalanceGrid">
+            <RoundRectangle StyleClass="BalanceRectangle"/>
+            
+            <Grid ColumnDefinitions="*,*"
+                  RowDefinitions="0.333*,0.333*,0.333*"
+                  StyleClass="Padding25">
+                <VerticalStackLayout>
+                    <Label StyleClass="StrongTitle" Text="Anomalía?"/>
+                    <!--<Label StyleClass="StrongTitle" Text="False"/>-->
+
+                <CheckBox x:Name="boolAnomalia"/>
+
+                </VerticalStackLayout>
+
+            </Grid>
+        </Grid>
+
+        <Button Grid.Row="2"
+                StyleClass="CircularButton"
+                FontSize="Small"
+                Text="Conectar"
+                Clicked="Button_Clicked"/>
+    </Grid>
+
+    
+</ContentPage>

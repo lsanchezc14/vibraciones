@@ -1,0 +1,1 @@
+C:\Git\ProjectIoT\ProjectIoT\MauiApp1\MauiApp1.csproj;x64
